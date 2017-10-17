@@ -1,0 +1,25 @@
+<li data-bind="fadeVisible: isVisible" id="giftwrapstep">
+    <div class="step-title" data-bind="i18n: 'GiftWrapping'" data-role="title"></div>
+    <div class="step-content" data-role="content" id="checkout-step-title">
+        <div class="include-giftwrap">
+            <strong><span data-bind="i18n: 'Add Gift Wraps :'"></span></strong><br/>
+            <div class="actions-toolbar-container">
+                <form method="post" class="giftwrapform" data-bind="submit: navigateToNextStep" novalidate="novalidate">    
+                    <input type="radio" class="radio i-checks" name="gift_wrap" value="1" data-bind="iCheck: { checked: selectedVal }" id="include-giftwrap" checked/><span data-bind="i18n: 'Yes'"></span><br/>
+                    <input type="radio" class="radio i-checks" name="gift_wrap" value="0" data-bind="iCheck: { checked: selectedVal }" id="include-giftwrap" /><span data-bind="i18n: 'No'"></span>
+            
+                    <div class="actions-toolbar">
+                        <div class="primary">
+                            <button class="button action continue primary skip-giftwrap" data-role="opc-continue" type="submit">
+                                <span>
+                                    <!-- ko i18n: 'Next'-->
+                                    <!-- /ko -->
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div>
+</li>
